@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thule Leela Vardhan | Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-outer" id="cursorOuter"></div>
+  <div class="cursor-inner" id="cursorInner"></div>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Scan Lines Overlay -->
+  <div class="scanlines"></div>
+
+  <!-- ───────── NAV ───────── -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">[</span>
+      <span class="logo-text">TLV</span>
+      <span class="logo-rank">DEV</span>
+      <span class="logo-bracket">]</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero"     class="nav-link" data-label="00">HOME</a></li>
+      <li><a href="#about"    class="nav-link" data-label="01">ABOUT</a></li>
+      <li><a href="#skills"   class="nav-link" data-label="02">SKILLS</a></li>
+      <li><a href="#projects" class="nav-link" data-label="03">PROJECTS</a></li>
+      <li><a href="#resume"   class="nav-link" data-label="04">RESUME</a></li>
+      <li><a href="#contact"  class="nav-link" data-label="05">CONTACT</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span>SYSTEM ONLINE</span>
+    </div>
+  </nav>
+
+  <!-- ───────── HERO ───────── -->
+  <section id="hero">
+    <div class="hero-grid-lines"></div>
+
+    <div class="hero-side-text left">FULL STACK DEVELOPER</div>
+    <div class="hero-side-text right">2026</div>
+
+    <div class="hero-content">
+      <div class="hero-rank-badge">
+        <span class="rank-label">DEVELOPER CLASS</span>
+        <span class="rank-value">S-RANK</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="name-line" data-text="LEELA">LEELA</span>
+        <span class="name-line accent" data-text="VARDHAN">VARDHAN</span>
+      </h1>
+      <div class="hero-title-row">
+        <span class="title-line"></span>
+        <p class="hero-subtitle" id="typedText"></p>
+        <span class="title-line"></span>
+      </div>
+      <p class="hero-desc">
+        B.Tech Computer Science Engineer · Deep Learning Researcher · Web Developer.<br/>
+        Turning complex problems into elegant, scalable solutions.
+      </p>
+      <div class="hero-cta-row">
+        <a href="#projects" class="btn-primary">
+          <span class="btn-glow"></span>
+          <span>VIEW PROJECTS</span>
+        </a>
+        <a href="#contact" class="btn-secondary">GET IN TOUCH</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-label">YEARS EXP</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="3">0</span>
+        <span class="stat-label">PROJECTS</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="7">0</span>
+        <span class="stat-label">TECH STACK</span>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <span>SCROLL TO EXPLORE</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ───────── ABOUT ───────── -->
+  <section id="about">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <h2 class="section-title">ABOUT ME</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="about-container">
+      <div class="about-image-wrap">
+        <div class="about-frame">
+          <div class="frame-corner tl"></div>
+          <div class="frame-corner tr"></div>
+          <div class="frame-corner bl"></div>
+          <div class="frame-corner br"></div>
+          <div class="about-avatar">
+            <div class="avatar-ring outer"></div>
+            <div class="avatar-ring inner"></div>
+            <div class="avatar-initials">T<span>L</span></div>
+            <div class="avatar-particles" id="avatarParticles"></div>
+          </div>
+          <div class="about-badge">
+            <span>✦</span> AVAILABLE
+          </div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <p class="about-intro">Hello, I'm Leela Vardhan.</p>
+        <p>
+          I'm <strong>Thule Leela Vardhan</strong> — a B.Tech Computer Science Engineering student at
+          GITAM University, Visakhapatnam (2022–2026), passionate about building impactful software
+          and intelligent systems that solve real-world problems.
+        </p>
+        <p>
+          My expertise spans responsive web development, deep learning, and clean UI/UX design.
+          I completed an internship at <strong>Zidio Development</strong>, where I built a full-featured
+          task management web application from the ground up.
+        </p>
+        <p>
+          Certified in <strong>Web Development</strong> and <strong>Python with AI &amp; ML</strong>,
+          I am actively seeking opportunities to apply my skills in a professional engineering environment.
+        </p>
+        <div class="about-attributes">
+          <div class="attr-row">
+            <span class="attr-label">FRONTEND</span>
+            <div class="attr-bar"><div class="attr-fill" data-width="90"></div></div>
+            <span class="attr-val">90</span>
+          </div>
+          <div class="attr-row">
+            <span class="attr-label">PYTHON / ML</span>
+            <div class="attr-bar"><div class="attr-fill" data-width="78"></div></div>
+            <span class="attr-val">78</span>
+          </div>
+          <div class="attr-row">
+            <span class="attr-label">PROBLEM SOLVING</span>
+            <div class="attr-bar"><div class="attr-fill" data-width="85"></div></div>
+            <span class="attr-val">85</span>
+          </div>
+          <div class="attr-row">
+            <span class="attr-label">TEAMWORK</span>
+            <div class="attr-bar"><div class="attr-fill" data-width="82"></div></div>
+            <span class="attr-val">82</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── SKILLS ───────── -->
+  <section id="skills">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <h2 class="section-title">TECH STACK</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="skills-grid">
+
+      <div class="skill-card" data-tier="S">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">S</div>
+        <div class="skill-icon">🌐</div>
+        <h3>HTML &amp; CSS</h3>
+        <p>Responsive layouts, animations, modern design systems, cross-browser compatibility</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="90"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="S">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">S</div>
+        <div class="skill-icon">⚡</div>
+        <h3>JavaScript</h3>
+        <p>DOM manipulation, async patterns, interactive UI, ES6+ features</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="82"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="A">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">A</div>
+        <div class="skill-icon">🐍</div>
+        <h3>Python</h3>
+        <p>AI &amp; ML applications, deep learning pipelines, scripting, data processing</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="78"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="A">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">A</div>
+        <div class="skill-icon">🧠</div>
+        <h3>Deep Learning</h3>
+        <p>ResNet18, Transformer Encoder, FER2013 dataset, real-time inference pipelines</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="74"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="A">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">A</div>
+        <div class="skill-icon">⚙️</div>
+        <h3>C Language</h3>
+        <p>System-level programming, algorithms, memory management, problem solving</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="70"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="B">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">B</div>
+        <div class="skill-icon">🗄️</div>
+        <h3>SQL</h3>
+        <p>Database design, queries, data retrieval and management</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="65"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="B">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">B</div>
+        <div class="skill-icon">🤖</div>
+        <h3>AI &amp; ML</h3>
+        <p>Machine learning concepts, model training &amp; evaluation, Python AI libraries</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="68"></div></div>
+      </div>
+
+      <div class="skill-card" data-tier="B">
+        <div class="skill-card-glow"></div>
+        <div class="skill-tier">B</div>
+        <div class="skill-icon">🛠️</div>
+        <h3>Task Management</h3>
+        <p>Agile workflows, role-based access, team collaboration, productivity tools</p>
+        <div class="skill-bar"><div class="skill-progress" data-w="72"></div></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ───────── PROJECTS ───────── -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <h2 class="section-title">PROJECTS</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- S-Rank: Facial Emotion Recognition -->
+      <div class="project-card featured">
+        <div class="project-rank">FEATURED · S-RANK PROJECT</div>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-number">001</span>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">ResNet18</span>
+            <span class="tag">Transformer</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+        </div>
+        <h3 class="project-title">Facial Emotion Recognition</h3>
+        <p class="project-desc">
+          Developed a deep learning–based facial emotion recognition system using a hybrid architecture
+          combining ResNet18 and Transformer Encoder (ViTFER) on the FER2013 dataset.
+          The model captures both spatial and global features to improve emotion classification.
+          Implemented a full pipeline: data preprocessing, training, evaluation, and
+          real-time webcam-based inference.
+        </p>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#" class="proj-link">LIVE DEMO ↗</a>
+            <a href="#" class="proj-link ghost">GITHUB ↗</a>
+          </div>
+          <span class="project-status active">● LIVE</span>
+        </div>
+      </div>
+
+      <!-- A-Rank: Shop Nova -->
+      <div class="project-card">
+        <div class="project-rank">A-RANK PROJECT</div>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-number">002</span>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+        <h3 class="project-title">Shop Nova</h3>
+        <p class="project-desc">
+          Built a responsive multi-page e-commerce shopping website featuring cart, wishlist,
+          and checkout functionality. Designed a modern UI with smooth user navigation,
+          product listings, and intuitive shopping flow using HTML and CSS.
+        </p>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#" class="proj-link">LIVE DEMO ↗</a>
+            <a href="#" class="proj-link ghost">GITHUB ↗</a>
+          </div>
+          <span class="project-status active">● LIVE</span>
+        </div>
+      </div>
+
+      <!-- B-Rank: Task Management (Internship) -->
+      <div class="project-card">
+        <div class="project-rank">B-RANK PROJECT · INTERNSHIP @ ZIDIO</div>
+        <div class="project-glow"></div>
+        <div class="project-header">
+          <span class="project-number">003</span>
+          <div class="project-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+          </div>
+        </div>
+        <h3 class="project-title">Task Management App</h3>
+        <p class="project-desc">
+          Developed a responsive task management web application at <strong>Zidio Development</strong>,
+          enabling efficient task organisation, assignment, and progress tracking.
+          Implemented task prioritisation, deadline tracking, and role-based access
+          to enhance team collaboration and productivity.
+        </p>
+        <div class="project-footer">
+          <div class="project-links">
+            <a href="#" class="proj-link">LIVE DEMO ↗</a>
+            <a href="#" class="proj-link ghost">GITHUB ↗</a>
+          </div>
+          <span class="project-status active">● LIVE</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ───────── RESUME ───────── -->
+  <section id="resume">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2 class="section-title">RESUME</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="resume-container">
+
+      <!-- Left: Education Timeline -->
+      <div class="resume-col">
+        <h3 class="resume-col-title">
+          <span class="resume-col-icon">🎓</span> EDUCATION
+        </h3>
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2022 – 2026</span>
+                <span class="timeline-badge">CURRENT</span>
+              </div>
+              <h4 class="timeline-title">B.Tech — Computer Science Engineering</h4>
+              <p class="timeline-org">GITAM University · Visakhapatnam, India</p>
+              <p class="timeline-detail">CGPA: 5.91</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">March 2022</span>
+              </div>
+              <h4 class="timeline-title">SSC XII — Intermediate</h4>
+              <p class="timeline-org">Sri Chaitanya Junior College · Visakhapatnam</p>
+              <p class="timeline-detail">Percentage: 59% &nbsp;|&nbsp; Score: 595</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">March 2020</span>
+              </div>
+              <h4 class="timeline-title">SSC X — Secondary School</h4>
+              <p class="timeline-org">Sri Chaitanya Techno School · Visakhapatnam</p>
+              <p class="timeline-detail">Percentage: 95% &nbsp;|&nbsp; Score: 575</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Internship + Certs + Download -->
+      <div class="resume-col">
+
+        <h3 class="resume-col-title">
+          <span class="resume-col-icon">💼</span> INTERNSHIP
+        </h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot accent-violet"></div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-year">2024</span>
+                <span class="timeline-badge violet">COMPLETED</span>
+              </div>
+              <h4 class="timeline-title">Web Development Intern</h4>
+              <p class="timeline-org">Zidio Development</p>
+              <p class="timeline-detail">Built a responsive task management web app with task prioritisation, deadline tracking, and role-based access using HTML &amp; CSS.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="resume-col-title" style="margin-top:40px">
+          <span class="resume-col-icon">🏅</span> CERTIFICATIONS
+        </h3>
+        <div class="cert-list">
+          <div class="cert-card">
+            <div class="cert-icon">⚡</div>
+            <div class="cert-info">
+              <span class="cert-name">Web Development</span>
+              <span class="cert-issuer">Zidio Development</span>
+            </div>
+            <span class="cert-badge">VERIFIED</span>
+          </div>
+          <div class="cert-card">
+            <div class="cert-icon">🤖</div>
+            <div class="cert-info">
+              <span class="cert-name">Python with AI &amp; ML</span>
+              <span class="cert-issuer">Next Chapter</span>
+            </div>
+            <span class="cert-badge">VERIFIED</span>
+          </div>
+        </div>
+
+        <a href="My_Resume__1_.pdf" download="Thule_Leela_Vardhan_Resume.pdf" class="btn-resume-download">
+          <span class="btn-glow"></span>
+          <span class="download-icon">↓</span>
+          <span>DOWNLOAD RESUME</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACT ───────── -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <h2 class="section-title">CONTACT ME</h2>
+      <span class="section-line"></span>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-left">
+        <p class="contact-intro">
+          Open to internships, full-time roles, freelance projects, and collaborations.
+          If you have an opportunity or just want to connect — feel free to reach out.
+        </p>
+        <div class="contact-info-items">
+          <div class="contact-info-item">
+            <span class="info-icon">✉</span>
+            <span>saileela337@gmail.com</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="info-icon">📞</span>
+            <span>+91 6305088114</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="info-icon">📍</span>
+            <span>Visakhapatnam, Andhra Pradesh, India</span>
+          </div>
+          <div class="contact-info-item">
+            <span class="info-icon">🎓</span>
+            <span>GITAM University · B.Tech CSE · 2022–2026</span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-btn">GitHub</a>
+          <a href="#" class="social-btn">LinkedIn</a>
+          <a href="mailto:saileela337@gmail.com" class="social-btn">Email</a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="hunterName">YOUR NAME</label>
+          <input id="hunterName" type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-group">
+          <label for="questChannel">EMAIL ADDRESS</label>
+          <input id="questChannel" type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-group">
+          <label for="questDetails">MESSAGE</label>
+          <textarea id="questDetails" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary full-width">
+          <span class="btn-glow"></span>
+          <span>SEND MESSAGE ⚡</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-logo">[ TLV ]</span>
+      <p class="footer-text">Designed &amp; Built by Thule Leela Vardhan · B.Tech CSE · GITAM University</p>
+      <p class="footer-copy">© 2025 · All rights reserved.</p>
+    </div>
+    <div class="footer-decoration">
+      <span>CODE</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
